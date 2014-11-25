@@ -33,6 +33,13 @@ module.exports = function (grunt) {
       client: require('./bower.json').appPath || 'client',
       dist: 'dist'
     },
+    'gh-pages': {
+      options: {
+        base: 'dist/public',
+        repo: 'https://github.com/albatrosary/azure.git'
+      },
+      src: ['**']
+    },
     express: {
       options: {
         port: process.env.PORT || 9000
@@ -656,7 +663,8 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'rev',
-    'usemin'
+    'usemin',
+    'gh-pages'
   ]);
 
   grunt.registerTask('default', [
