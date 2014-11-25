@@ -5,6 +5,9 @@ angular.module('azureApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
+    },{
+      'title': 'Sample',
+      'link': '/sample'
     }];
 
     $scope.isCollapsed = true;
